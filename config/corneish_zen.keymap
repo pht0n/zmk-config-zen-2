@@ -46,14 +46,14 @@
                 second_layer {
                         label = "SYM";
 // -----------------------------------------------------------------------------------------
-// |  @  |  #  |  $  |  %   | EURO |   |  J  |  L  | Ue  |  Y  | BKSP|
+// |  @  |  #  |  $  |  %   | EURO |   |  mu  | law| Ue  |  ?  | BKSP|
 // | Ae  |  "  | SZ  | UNDO | REDO |   |PG_DN|PG_UP|  {  |  }  |  Oe |
 // |  \  |  ~  |  &  |  "|" | deg  |   |  [  |  ]  |  (  |  )  |  !  |
 //                    |     |     |     |   | SPC | SHFT |     |
                         bindings = <
-   &kp AT    &kp HASH  &kp DLLR  &kp PRCNT &kp RA(N5)  &kp RA(M) &kp RA(LS(S)) &kp RA(Y) &kp QMARK &trans
-   &kp RA(Q) &kp APOS  &kp RA(S) &kp LC(Z) &kp LC(Y)   &kp PG_DN &kp PG_UP     &kp LBRC  &kp RBRC  &kp RA(P)
-   &kp Z     &kp X     &kp C     &kp D     &kp V       &kp LBKT  &kp RBKT      &kp LPAR  &kp LPAR  &kp EXCL
+   &kp AT    &kp HASH  &kp DLLR  &kp PRCNT &kp RA(N5)     &kp RA(M) &kp RA(LS(S)) &kp RA(Y) &kp QMARK &trans
+   &kp RA(Q) &kp APOS  &kp RA(S) &kp LC(Z) &kp LC(Y)      &kp PG_DN &kp PG_UP     &kp LBRC  &kp RBRC  &kp RA(P)
+   &kp BSLH  &kp TILDE &kp AMPS  &kp PIPE  &kp RA(SEMI)   &kp LBKT  &kp RBKT      &kp LPAR  &kp LPAR  &kp EXCL
                                  &trans &trans &trans  &trans &kp LSHFT &trans
                         >;
                 };
@@ -61,26 +61,26 @@
                 third_layer {
                         label = "FUNC";
 // -----------------------------------------------------------------------------------------
-// | F1   | F2   |  F3  | F4   | F5   |   | F11 | F12 | F8  |  (  |  )  | BKSP |
-// | LCTRL| GUI  | LALT | LSHFT| NONE |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-// | F6   | F7   | F8   | F9  | F10 |   |  _  |  +  |  {  |  }  | "|" |  ~   |
+// | F1   | F2   |  F3  | F4   | F5   |   | F11 | F12 | F8  |  (  |  )  |     |
+// | LCTRL| GUI  | LALT | LSHFT| NONE |   |  -  |  =  |  [  |  ]  |  \  |     |
+// | F6   | F7   | F8   | F9    | F10 |   |  _  |  +  |  {  |  }  | "|" |     |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-   &kp F1    &kp F2    &kp F3    &kp F4    &kp F5      &kp F11 &kp F12  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp BSPC
-   &kp LCTRL &trans    &trans &trans   &trans          &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &kp GRAVE
-   &kp F6    &kp F7    &kp F8    &kp F9    &kp F10     &trans      &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &kp TILDE
+   &kp F1    &kp F2    &kp F3    &kp F4    &kp F5      &kp F11   &kp F12   &kp KP_MULTIPLY &kp LPAR &kp RPAR
+   &kp LCTRL &trans    &trans    &trans    &trans      &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH
+   &kp F6    &kp F7    &kp F8    &kp F9    &kp F10     &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE
                               &trans &trans &trans     &trans &trans &trans
                         >;
                 };
                 forth_layer {
                         label = "BLUETH";
 // -----------------------------------------------------------------------------------------
-// |      |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
+// |      |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |      |
 // |      | BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
 // |      |BTCLR|     |     |     |     |   |     |     |     |     |     |      |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-   &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &kp
+   &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0
    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans
    &bt BT_CLR   &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans
                                          &trans &trans &trans         &trans &trans &trans
