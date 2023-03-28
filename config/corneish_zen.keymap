@@ -37,7 +37,7 @@
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
    &kp N1    &kp N2    &kp N3    &kp N4    &kp N5      &kp N6    &kp N7    &kp N8    &kp N9    &trans
-   &kp LCTRL &kp GUI   &kp LALT  &kp LSHFT &kp DEL     &kp EQUAL &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT
+   &kp LCTRL &kp LGUI  &kp LALT  &kp LSHFT &kp DEL     &kp EQUAL &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT
    &kp CARET &kp SLASH &kp ASTRK &kp MINUS &kp PLUS    &kp HOME  &kp END   &trans    &trans    &trans
                             &kp LGUI &trans &kp RET    &kp SPACE &mt LSHFT N0 &kp PSCRN
                         >;
@@ -53,7 +53,7 @@
                         bindings = <
    &kp AT    &kp HASH  &kp DLLR  &kp PRCNT &kp RA(N5)     &kp RA(M) &kp RA(LS(S)) &kp RA(Y) &kp QMARK &trans
    &kp RA(Q) &kp APOS  &kp RA(S) &kp LC(Z) &kp LC(Y)      &kp PG_DN &kp PG_UP     &kp LBRC  &kp RBRC  &kp RA(P)
-   &kp BSLH  &kp TILDE &kp AMPS  &kp PIPE  &kp RA(SEMI)   &kp LBKT  &kp RBKT      &kp LPAR  &kp LPAR  &kp EXCL
+   &kp BSLH  &kp TILDE &kp AMPS  &kp PIPE  &kp RA(COLON)  &kp LBKT  &kp RBKT      &kp LPAR  &kp RPAR  &kp EXCL
                                  &trans &trans &trans  &trans &kp LSHFT &trans
                         >;
                 };
@@ -62,12 +62,12 @@
                         label = "FUNC";
 // -----------------------------------------------------------------------------------------
 // | F1   | F2   |  F3  | F4   | F5   |   | F11 | F12 | F8  |  (  |  )  |     |
-// | LCTRL| GUI  | LALT | LSHFT| NONE |   |  -  |  =  |  [  |  ]  |  \  |     |
+// | LCTRL| LGUI | LALT | LSHFT| NONE |   |  -  |  =  |  [  |  ]  |  \  |     |
 // | F6   | F7   | F8   | F9    | F10 |   |  _  |  +  |  {  |  }  | "|" |     |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
    &kp F1    &kp F2    &kp F3    &kp F4    &kp F5      &kp F11   &kp F12   &kp KP_MULTIPLY &kp LPAR &kp RPAR
-   &kp LCTRL &trans    &trans    &trans    &trans      &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH
+   &kp LCTRL &kp LGUI  &kp LALT  &kp LSHFT &trans      &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH
    &kp F6    &kp F7    &kp F8    &kp F9    &kp F10     &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE
                               &trans &trans &trans     &trans &trans &trans
                         >;
