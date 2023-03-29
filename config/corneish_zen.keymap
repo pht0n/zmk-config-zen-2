@@ -31,11 +31,11 @@
 // |  Q  |  W  |  F  |  P  |  B  |   |  J  |  L  |  U  |  Y  | BKSP|
 // |  A  |  R  |  S  |  T  |  G  |   |  M  |  N  |  E  |  I  |  O  |
 // |  Z  |  X  |  C  |  D  |  V  |   |  K  |  H  |  ,  |  .  | SEMI|
-//                    | FCN | SYM | ENT |   | SPC |LSHFT| ALT |
+//             | FCN | SYM | ENT |   | SPC |LSHFT| ALT |
                         bindings = <
-   &kp Q &kp W &kp F &kp P &kp B   &kp J &kp L  &kp U     &kp Y   &kp BSPC
-   &hm LCTRL A &kp R &kp S &kp T &kp G   &kp M &kp N  &kp E     &kp I   &kp    O
-   &kp Z &kp X &kp C &kp D &kp V   &kp K &kp H  &kp COMMA &kp DOT &kp SEMI
+   &kp       Q &kp      W &kp      F &kp       P &kp B   &kp J &kp       L  &kp      U &kp Y      &kp BSPC
+   &hm LCTRL A &hm LGUI R &hm LALT S &hm LSHFT T &kp G   &kp M &hm LSHFT N  &hm LALT E &hm LGUI I &hm LCTRL O
+   &kp       Z &kp      X &kp      C &kp       D &kp V   &kp K &kp       H  &kp COMMA  &kp DOT    &kp SEMI
    &lt 3 ESC &lt 1 TAB &lt 2 RET   &kp SPACE &kp LSHFT &lt 4 DEL
                         >;
                 };
@@ -44,9 +44,9 @@
                         label = "NUM";
 // -----------------------------------------------------------------------------------------
 // |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  | BKSP|
-// |LCTRL| GUI | ALT | SHFT| DEL |   |  =  | LFT | DWN |  UP | RGT |
+// |LCTRL| GUI | ALT |UNDER| DEL |   |  =  | LFT | DWN |  UP | RGT |
 // |  ^  |  /  |  *  |  -  |  +  |   | HOME| END |  ,  |  .  | SEMI|
-//                    | GUI |     | SPC |   | ENT |     | ALT |
+//             | GUI |     | SPC |   | ENT |  0  | ALT |
                         bindings = <
    &kp N1    &kp N2    &kp N3    &kp N4    &kp N5      &kp N6    &kp N7    &kp N8    &kp N9    &trans
    &kp LCTRL &kp LGUI  &kp LALT  &kp LSHFT &kp DEL     &kp EQUAL &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT
