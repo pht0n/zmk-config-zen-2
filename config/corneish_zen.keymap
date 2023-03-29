@@ -2,6 +2,30 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
+#define QUICK_TAP_MS 175
+
+ZMK_BEHAVIOR(hml, hold_tap,  // left-hand HRMs
+    flavor = "balanced";
+    tapping-term-ms = <280>;
+    quick-tap-ms = <QUICK_TAP_MS>;
+    global-quick-tap-ms = <150>;        // requires PR #1387
+    bindings = <&kp>, <&kp>;
+    hold-trigger-key-positions = <KEYS_R THUMBS>;
+    hold-trigger-on-release;            // requires PR #1423
+)
+
+ZMK_BEHAVIOR(hmr, hold_tap,  // right-hand HRMs
+    flavor = "balanced";
+    tapping-term-ms = <280>;
+    quick-tap-ms = <QUICK_TAP_MS>;
+    global-quick-tap-ms = <150>;        // requires PR #1387
+    bindings = <&kp>, <&kp>;
+    hold-trigger-key-positions = <KEYS_L THUMBS>;
+    hold-trigger-on-release;            // requires PR #1423
+)
+
+
+
 / {
   chosen {
     //zmk,matrix_transform = &default_transform;
@@ -22,7 +46,7 @@
 //                    | FCN | SYM | ENT |   | SPC |LSHFT| ALT |
                         bindings = <
    &kp Q &kp W &kp F &kp P &kp B   &kp J &kp L  &kp U     &kp Y   &kp BSPC
-   &kp A &kp R &kp S &kp T &kp G   &kp M &kp N  &kp E     &kp I   &kp    O
+   &hml LCTRL A &kp R &kp S &kp T &kp G   &kp M &kp N  &kp E     &kp I   &kp    O
    &kp Z &kp X &kp C &kp D &kp V   &kp K &kp H  &kp COMMA &kp DOT &kp SEMI
    &lt 3 ESC &lt 1 TAB &lt 2 RET   &kp SPACE &kp LSHFT &lt 4 DEL
                         >;
