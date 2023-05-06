@@ -23,7 +23,7 @@
 		};
 
 		lthp: layer-tap_hold_preferred {
-		    compatible = "zmk,behavior-layer-tap";
+		    compatible = "zmk,behavior-hold-tap";
 		    label = "LAYER_TAP_HOLD_PREFERRED";
 		    #binding-cells = <2>;
 		    flavor = "hold-preferred";
@@ -33,7 +33,7 @@
 		};
 
 		ltp: layer-tap_preferred {
-		    compatible = "zmk,behavior-layer-tap";
+		    compatible = "zmk,behavior-hold-tap";
 		    label = "LAYER_TAP_PREFERRED";
 		    #binding-cells = <2>;
 		    flavor = "tab-preferred";
