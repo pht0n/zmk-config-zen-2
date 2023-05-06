@@ -36,7 +36,7 @@
 		    compatible = "zmk,behavior-hold-tap";
 		    label = "LAYER_TAP_PREFERRED";
 		    #binding-cells = <2>;
-		    flavor = "tab-preferred";
+		    flavor = "tap-preferred";
 		    tapping-term-ms = <200>;
 		    quick-tap-ms = <200>;
 		    global-quick-tap;	
