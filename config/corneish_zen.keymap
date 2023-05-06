@@ -16,11 +16,44 @@
 		    compatible = "zmk,behavior-hold-tap";
 		    label = "HOMEROW_MODS";
 		    #binding-cells = <2>;
-		    tapping-term-ms = <300>;
-		    quick-tap-ms = <0>;
 		    flavor = "tap-preferred";
+		    tapping-term-ms = <300>;
+		    quick-tap-ms = <0>;		    
 		    bindings = <&kp>, <&kp>;
 		};
+
+		lthp: layer-tap_hold_preferred {
+		    compatible = "zmk,behavior-layer-tap";
+		    label = "LAYER_TAP_HOLD_PREFERRED";
+		    #binding-cells = <2>;
+		    flavor = "hold-preferred";
+		    tapping-term-ms = <500>;
+		    quick-tap-ms = <125>;
+		    bindings = <&mo>, <&kp>;
+		};
+
+		ltp: layer-tap_preferred {
+		    compatible = "zmk,behavior-layer-tap";
+		    label = "LAYER_TAP_PREFERRED";
+		    #binding-cells = <2>;
+		    flavor = "tab-preferred";
+		    tapping-term-ms = <200>;
+		    quick-tap-ms = <200>;
+		    global-quick-tap;	
+		    bindings = <&mo>, <&kp>;
+		};
+
+		mtp: mod_tap_preferred {
+		    compatible = "zmk,behavior-hold-tap";
+		    label = "MOD_TAP_PREFERRED";
+		    #binding-cells = <2>;
+		    flavor = "tap-preferred";
+		    tapping-term-ms = <300>;
+		    quick-tap-ms = <200>;
+		    global-quick-tap;		    
+		    bindings = <&kp>, <&kp>;
+		};
+
 	    };
         keymap {
                 compatible = "zmk,keymap";
@@ -36,7 +69,7 @@
    &kp       Q &kp      W &kp      F &kp       P &kp B   &kp J &kp       L  &kp      U &kp Y      &kp BSPC
    &hm LCTRL A &hm LGUI R &hm LALT S &hm LSHFT T &kp G   &kp M &hm LSHFT N  &hm LALT E &hm LGUI I &hm LCTRL O
    &kp       Z &kp      X &kp      C &kp       D &kp V   &kp K &kp       H  &kp COMMA  &kp DOT    &kp SEMI
-   &lt 3 ESC &lt 1 TAB &lt 2 RET   &kp SPACE &kp LSHFT &lt 4 DEL
+   &lthp 3 ESC &lthp 1 TAB &lthp 2 RET   &kp SPACE &kp LSHFT &ltp 4 DEL
                         >;
                 };
 
@@ -49,9 +82,9 @@
 //             | GUI |     | SPC |   | ENT |  0  | ALT |
                         bindings = <
    &kp N1    &kp N2    &kp N3    &kp N4    &kp N5      &kp N6    &kp N7    &kp N8    &kp N9    &trans
-   &kp LCTRL &kp LGUI  &kp LALT  &kp LSHFT &kp DEL     &kp EQUAL &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT
+   &kp LCTRL &kp LGUI  &kp LALT  &kp UNDER &kp DEL     &kp EQUAL &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT
    &kp CARET &kp SLASH &kp ASTRK &kp MINUS &kp PLUS    &kp HOME  &kp END   &trans    &trans    &trans
-                            &kp LGUI &trans &kp RET    &kp SPACE &mt LSHFT N0 &kp PSCRN
+                            &kp LGUI &trans &kp RET    &kp SPACE &mtp LSHFT N0 &kp PSCRN
                         >;
                 };
 
