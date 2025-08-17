@@ -14,17 +14,17 @@
         compatible = "zmk,combos";
         combo_copy {
             timeout-ms = <50>;
-            key-positions = <x c>;
+            key-positions = <22 23>;
             bindings = <&kp LC(c)>;
         };
         combo_cut {
             timeout-ms = <50>;
-            key-positions = <x d>;
+            key-positions = <22 24>;
             bindings = <&kp LC(x)>;
         };
         combo_paste {
             timeout-ms = <50>;
-            key-positions = <c d>;
+            key-positions = <23 24>;
             bindings = <&kp LC(v)>;
         };
     };
