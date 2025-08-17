@@ -10,6 +10,27 @@
 };
 
 / {
+    combos {
+        compatible = "zmk,combos";
+        combo_copy {
+            timeout-ms = <50>;
+            key-positions = <x c>;
+            bindings = <&kp LC(c)>;
+        };
+        combo_cut {
+            timeout-ms = <50>;
+            key-positions = <x d>;
+            bindings = <&kp LC(x)>;
+        };
+        combo_paste {
+            timeout-ms = <50>;
+            key-positions = <c d>;
+            bindings = <&kp LC(v)>;
+        };
+    };
+};
+
+/ {
 
 	behaviors {
 		hm: homerow_mods {
@@ -81,10 +102,10 @@
 // |  ^  |  /  |  *  |  -  |  +  |   | HOME| END |  ,  |  .  | SEMI|
 //             | GUI |     | RET |   | SPC |  0  |RePSCRN|
                         bindings = <
-   &kp N1    &kp N2    &kp N3    &kp N4    &kp N5      &kp N6    &kp N7    &kp N8    &kp N9    &trans
-   &kp LCTRL &kp LGUI  &kp LALT  &kp DEL   &kp UNDER   &kp EQUAL &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT
-   &kp CARET &kp SLASH &kp ASTRK &kp MINUS &kp PLUS    &kp HOME  &kp END   &trans    &trans    &trans
-                            &kp LGUI &trans &kp RET    &kp SPACE &kp N0 &kp LS(PSCRN)
+   &kp N1    &kp N2    &kp N3    &kp N4        &kp N5      &kp N6    &kp N7    &kp N8    &kp N9    &trans
+   &kp LCTRL &kp LGUI  &kp LALT  &hm LSHFT DEL &kp UNDER   &kp EQUAL &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT
+   &kp CARET &kp SLASH &kp ASTRK &kp MINUS     &kp PLUS    &kp HOME  &kp END   &trans    &trans    &trans
+                            &kp LGUI &trans    &kp RET     &kp SPACE &kp N0 &kp LS(PSCRN)
                         >;
                 };
 
