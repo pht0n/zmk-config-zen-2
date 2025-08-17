@@ -25,6 +25,8 @@
   		COMBO(copy, &kp LC(C), 21 22)
   		COMBO(cut, &kp LC(X), 21 23)
   		COMBO(paste, &kp LC(V), 22 23)
+		COMBO(select_all, &kp LC(A), 1 2)
+		COMBO(LR_parenthesis,&kp LPAR &kp RPAR &kp LEFT, 27 28)
 		};
 
 	behaviors {
