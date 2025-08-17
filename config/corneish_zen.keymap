@@ -2,6 +2,14 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
+#define COMBO(NAME, BINDINGS, KEYPOS) \
+  combo_##NAME { \
+    timeout-ms = <50>; \
+    bindings = <BINDINGS>; \
+    key-positions = <KEYPOS>; \
+    layers = <0>; \
+  };
+
 / {
   chosen {
     //zmk,matrix_transform = &default_transform;
@@ -10,27 +18,14 @@
 };
 
 / {
-    combos {
-        compatible = "zmk,combos";
-        combo_copy {
-            timeout-ms = <50>;
-            key-positions = <22 23>;
-            bindings = <&kp LC(C)>;
-        };
-        combo_cut {
-            timeout-ms = <50>;
-            key-positions = <22 24>;
-            bindings = <&kp LC(X)>;
-        };
-        combo_paste {
-            timeout-ms = <50>;
-            key-positions = <23 24>;
-            bindings = <&kp LC(V)>;
-        };
-    };
-};
 
-/ {
+	combos {
+  		compatible = "zmk,combos";
+  
+  		COMBO(copy, &kp LC(C), 21 22)
+  		COMBO(cut, &kp LC(X), 21 23)
+  		COMBO(paste, &kp LC(V), 22 23)
+		};
 
 	behaviors {
 		hm: homerow_mods {
